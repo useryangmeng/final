@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="这是杨萌的测试网页">
+    <meta name="keywords" content="test,html,css">
+    <title>杨萌</title>
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./clearfix.css">
+    <style>
+        header,
+        main,
+        footer {
+            width: 1200px;
+            margin: 0 auto;
+
+
+        }
+        main{
+           margin-top: -80px;
+        }
+        main,
+        .m2,
+        footer{
+            background-image: url(./picture/beij1.png   );
+        }
+
+        header {
+            position: sticky;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            margin: 0 auto;
+            z-index: 99;
+        }
+        
+
+        nav {
+            width: 1200px;
+            height: 70px;
+            line-height: 70px;
+            background-color: rgb(68, 68, 68);
+
+        }
+
+        .n1 {
+            width: 50px;
+            height: 50px;
+            background-color: #bfa;
+            border-radius: 50%;
+            float: left;
+            margin: 10px 20px;
+            margin-right: 100px;
+            overflow: hidden;
+
+        }
+       
+
+        .n2 {
+            float: left;
+            margin-left: 100px;
+        }
+
+
+
+        .n2 li {
+            float: left;
+            font-size: 20px;
+            color: rgb(204, 204, 204);
+            margin-left: 40px;
+
+        }
+
+        .n2 li a {
+            color: rgb(204, 204, 204);
+            text-decoration: none;
+        }
+
+        .n2 li a:hover {
+            color: rgb(255, 255, 255);
+        }
+
+        .n2 li:last-child:hover a {
+            color: rgb(255, 255, 255);
+        }
+
+        @keyframes push {
+            from {
+                background-position: 2px 0;
+            }
+
+            to {
+                background-position: -244px 0;
+            }
+
+
+        }
+
+        .n3 {
+            float: right;
+            background-image: url(./picture/4.png);
+            width: 83px;
+            height: 70px;
+            margin-right: 50px;
+            animation: push 2s steps(3) infinite;
+            background-color: rgb(68, 68, 68);
+        }
+
+        .mo1 {
+            width: 120px;
+            height: 0px;
+            background-color: rgb(245, 245, 245);
+            line-height: normal;
+            text-align: center;
+            overflow: hidden;
+            transition: all 0.3s;
+            border-radius: 5px;
+            position: absolute;
+            color: rgb(204, 204, 204);
+            left: 740px;
+        }
+        /* .mo1::after{
+            content: '';
+            position: absolute;
+            border: 15px solid red;
+            border-top: none;
+            width: 0px;
+            height: 0px;
+            border-color: transparent transparent red transparent;
+            left: 45px;
+            top: -15px;
+             display: none;
+            z-index: 999; 
+        }*/
+
+        .mo1 img {
+            margin: 10px 15px;
+        }
+
+        .n22:hover .mo1 {
+
+            height: 150px;
+        }
+
+
+
+
+
+        .m1 {
+            width: 1200px;
+            height: 801px;
+            background-image: url(./picture/backgr.png);
+            text-align: center;
+
+
+        }
+
+        .m1title {
+            color: orange;
+            font-size: 200px;
+            padding-top:50px;
+        }
+        .m1 h2{
+            font-size: 18px;
+            margin-left: 540px;
+        }
+        .m1 p{
+            font-size: 25px;
+            margin-top: 100px;
+            
+        }
+
+        .m2 {
+            background-color: rgb(255, 255, 255);
+        }
+
+        .m21 a {
+            float: left;
+            width: 200px;
+            height: 250px;
+            box-sizing: border-box;
+            background-color: rgb(245, 245, 245);
+            margin: 30px 100px;
+            border-radius: 10px;
+            transition: all .3s;
+            text-align: center;
+            text-decoration: none;
+            color: black;
+            padding-top: 10px;
+            font-size: 20px;
+        }
+
+        .m21 a:nth-child(odd) {
+            margin-left: 300px;
+        }
+
+        .m21 a:hover {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            transform: translateY(-10px);
+        }
+        .m21 li{
+            margin-top: 15px ;
+            margin-bottom: 20px;
+        }
+        .m21 p{
+            font-size: 16px;
+            font-family: sans-serif;
+            margin-top: 15px;
+        }
+
+        .m41{
+            width: 1000px;
+            height: 450px;
+            float: left;
+            overflow: hidden;
+            margin: 0 100px;
+        }
+        .m41 li{
+            float: left;
+            width: 200px;
+            height: 450px;
+            transition: width .3s;
+        }
+        .m41 li img{
+            width:600px;
+        }
+        .m41:hover li{
+            width: 100px;
+        }
+        .m41 li:hover{
+            width: 600px;
+        }
+
+
+        .m51{
+            width: 1000px;
+            height: 96px;
+            float: left;
+            overflow: hidden;
+            margin: 0 100px;
+        }
+        .m51 li{
+            float: left;
+            transition: all .3s;
+        }
+        .m51 li img{
+            width: 150px;
+            height: 96px;
+            transition: all .3s;
+        }
+        .m512,
+        .m514{
+            margin: 0 62.5px;
+        }
+        .m51 li:hover img{
+            transform: rotateY(180deg);
+        }
+        .m3 h1,.m4 h1,.m5 h1,.m6, h1,.m7 h1{
+           
+            text-align: center;
+            font-size: 32px;
+            font-weight: 700;
+            margin-top: 80px;
+            margin-bottom: 30px;
+            
+        }
+        .m42,.m52,.m31,.m61{
+            width: 800px;
+           font-weight:600 ;
+           margin: 8px auto;
+           font-size: 20px;
+           text-align: justify;
+           line-height: 1.2;
+        }
+        .m52{
+            margin-bottom: 30px;
+        }
+        span{
+            text-decoration: line-through;
+        }
+        .m61{
+            margin-bottom: 0px;
+        }
+        .m7 h1{
+            margin-bottom: 0px;
+            font-family: fantasy;
+            color: orange;
+        } 
+         
+
+
+
+
+
+        
+        @keyframes example {
+            from {
+                height: 10px;
+                top: 90px;
+            }
+
+            to {
+                height: 50px;
+                top: 50px;
+            }
+        }
+
+        .f1 {
+            width: 1200px;
+            height: 100px;
+
+            position: relative;
+
+        }
+
+        .f11 {
+            list-style: none;
+            width: 10px;
+            height: 10px;
+            background-color: black;
+            float: left;
+            position: relative;
+            top: 90px;
+            animation-name: example;
+            animation-duration: .5s;
+            animation-direction: alternate;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+        }
+
+        .f1:hover li {
+            animation-play-state: paused;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="clearfix">
+            <div class="n1">
+                <a href="https://www.duitang.com/category/?cat=avatar" target="_blank"><img src="./picture/29.png" alt="头像" ></a>
+            </div>
+            <ul class="n2">
+
+                <li><a href="#1">关于我</a></li>
+                <li><a href="#2">我的所见</a></li>
+                <li><a href="#3">我的游戏</a></li>
+                <li><a href="#4">我的感想</a></li>
+                <li class="n22"><a href="javascript" target="_blank">联系我
+                        <div class="mo1">
+                            <img src="./picture/two6.png" alt="二维码">QQ
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <div class="n3"></div>
+        </nav>
+
+    </header>
+
+
+
+    <main>
+        <div class="m1">
+            <h1 class="m1title" style="font-family:fantasy;">welcome</h1>
+            <h2 style="font-family:方正粗黑宋简体;">欢迎来到杨萌的介绍页面</h2>
+            <p style="font-family:宋体;">在这里，集结了我从开学时到如今的学习成果，我将在这里向学长&学姐展示我的拙作</p>
+
+        </div>
+        <div class="m2">
+            <ul class="m21 clearfix">
+                <a href="#1" style="background-color:rgb(102, 107, 162); color: rgb(255, 255, 255);" >
+                    <li>
+                        关于我
+                    </li>
+                    <hr>
+                    <p>既然是关于自我描述的网页，则自然需要一个关于自己的简短介绍，在这里，我以这种方式来对自己的情况进行一个简短的综述。</p>
+                </a>
+                <a href="#2" style="background-color:rgb(74, 134, 204); color: rgb(255,255,255);">
+                    <li>
+                        我的所见
+                    </li>
+                    <hr>
+                    <p>在这个生活了18年的世界中，虽然不是旅游爱好者，可也见到了一些别致的景色，在我的所见中展示了美丽的nature。</p>
+                </a>
+                <a href="#3" style="background-color:rgb(50, 52, 110) ; color: white;">
+                    <li>
+                        我的游戏
+                    </li>
+                    <hr>
+                    <p>作为一个狂热的游戏爱好者（doge），游戏一直伴随了我的整个成长过程，在游戏中收获的快乐、友谊和relation更是我难以割舍的部分，所以我将游戏作为一个单独的模块展示。</p>
+                </a>
+                <a href="#4" style="background-color:rgb(44, 51, 81) ; color: white;">
+                    <li>
+                        我的感想
+                    </li>
+                    <hr>
+                    <p>在转入大学生活的初期阶段中，关于前端的学习是我大学的第一个明确目标，学习前端也促进了我与大学生活融合，于是我的感想也将作为我展示的一部分。</p>
+                </a>
+            </ul>
+
+        </div>
+
+        <div class="m3">
+            <div>
+                <h1 id="1">关于我</h1>
+                <p class="m31">
+                    &nbsp&nbsp&nbsp&nbsp向工作室招新肯定是需要将自己的情况、兴趣爱好、未来看法之类的展示出来啦(<span>其实是题目的要求</span>)：我叫杨萌，来自四川达州，平时比较静默，但其实与他人的交流我也十分注重，我喜欢自己一个人思考一些问题（虽然可能经常错），对技术是带有敬畏与好奇的，这也是我选择软件工程的原因（通过一般人看不懂的代码实现问题真的很酷）,平时的空闲时间我喜欢打游戏、出去看风景、散步...在高三时学了一段时间篮球，
+                    偶尔也会打打篮球,对于未来，希望自己能好好利用大学的平台，加入工作室，学习技术，同时也想自己在人际交往上得到提升
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="m4 clearfix">
+            <h1 id="2">我的所见</h1>
+            <p class="m42">
+                &nbsp&nbsp&nbsp&nbsp众所周知,作为幸福的中国青年，我们往往会有一段苦逼的中学生活经历，家长的叮嘱、学校的"压迫"、以及自己不好好读书只能搬砖的恐惧，于是我们常常埋头于学业中，但这并不妨碍我们有一颗热爱自然，拥抱自然的心，于是在每次放假在网吧上完通宵后，我们在凌晨4点上山，看到了如下的景象：</p>
+            <ul class="m41">
+                <li><img src="./picture/jian1.jpg" alt=""></li>
+                <li><img src="./picture/jian2.jpg" alt=""></li>
+                <li><img src="./picture/jian3.jpg" alt=""></li>
+                <li><img src="./picture/jian4.jpg" alt=""></li>
+                <li><img src="./picture/jian6.jpg" alt=""></li>
+            </ul>
+
+        </div>
+
+
+        <div class="m5 clearfix">
+            <h1 id="3">我的游戏</h1>
+            <p class="m52">&nbsp&nbsp&nbsp&nbsp还记得初一的那个周末，被同学"莫名其妙"地带进了网吧之后，从此便为我打开了一扇新的大门，虽然家长极力劝阻，但依然阻止不了我周末的光顾（doge），但游戏也是我在紧张的学习或emo时消遣的利器，从4399、穿越火线到守望先锋、绝地求生、炉石传说、这些划时代的精品伴随了我的整个中学生涯，我将它们展示也同时推荐给大家。</p>
+            <ul class="m51">
+                <a href="https://cf.qq.com/" target="_blank"><li class="m511"><img src="./picture/cf.jpg" alt=""></li></a>
+                <a href="https://ow.blizzard.cn/home" target="_blank"><li class="m512"><img src="./picture/overwatch.jpg" alt=""></li></a>
+                <a href="https://cn.pubg.com/" target="_blank"><li class="m513"><img src="./picture/pubg.jpg" alt=""></li></a>
+                <a href="https://hs.blizzard.cn/landing" target="_blank"><li class="m514"><img src="./picture/stone.jpg" alt=""></li></a>
+                <a href="https://www.4399.com/" target="_blank"><li class="m515"><img src="./picture/4399.jpg" alt=""></li></a>
+
+            </ul>
+
+        </div>
+
+        <div class="m6">
+            <h1 id="4">我的感想</h1>
+            <p class="m61">
+                &nbsp&nbsp&nbsp&nbsp从初入大学到现在，已经获得了部分大学生活的经验，从初入大学时的憧憬、兴奋，到如今的平淡、日常，实际上是经历了兴奋、躺平再到慢慢寻找自己的学习方向的过程
+                在刚入学时，高中的学习路径依然是主导，但很快便暴露出其问题，大学的生活更加要求自己的自律性而不是学校的规定，在参加工作室招新的过程中，让我找到了很多以前忽视的可以利用的学习时间，
+                在真正投入前端的学习中时，也让我对软件工程各个方向的内容有了一个大致的了解。虽然内容上的东西很繁琐，但能通过自己的学习来实现自己认为很酷的东西真的非常有成就感（虽然现在还是基础的一部分），
+                也正是这样的学习过程，也让我更加喜欢前端的相关内容，不论招新的情况如何，前端的学习都将是我坚持去做的事情。可以说这段时间的打磨，让我更好的融入了大学生活，以及在大学中技术的学习。
+                来参见工作室的招新既是我迈出第一步的节点，也是我向下一步迈进的阶梯。感想工作室给予的相关内容与方向的帮助，以及学长的解惑。
+            </p>
+
+        </div>
+        <div class="m7">
+            <h1>The End</h1>
+
+        </div>
+
+
+    </main>
+
+
+
+    <footer>
+        <div>
+            <ul class="f1">
+                <li class="f11" style="animation-delay: 0s;"></li>
+                <li class="f11" style="animation-delay: .1s;"></li>
+                <li class="f11" style="animation-delay: .2s;"></li>
+                <li class="f11" style="animation-delay: .3s;"></li>
+                <li class="f11" style="animation-delay: .4s;"></li>
+                <li class="f11" style="animation-delay: .5s;"></li>
+                <li class="f11" style="animation-delay: .6s;"></li>
+                <li class="f11" style="animation-delay: .7s;"></li>
+                <li class="f11" style="animation-delay: .8s;"></li>
+                <li class="f11" style="animation-delay: .9s;"></li>
+                <li class="f11" style="animation-delay: 1s;"></li>
+                <li class="f11" style="animation-delay: 1.1s;"></li>
+                <li class="f11" style="animation-delay: 1.2s;"></li>
+                <li class="f11" style="animation-delay: 1.3s;"></li>
+                <li class="f11" style="animation-delay: 1.4s;"></li>
+                <li class="f11" style="animation-delay: 1.5s;"></li>
+                <li class="f11" style="animation-delay: 1.6s;"></li>
+                <li class="f11" style="animation-delay: 1.7s;"></li>
+                <li class="f11" style="animation-delay: 1.8s;"></li>
+                <li class="f11" style="animation-delay: 1.9s;"></li>
+
+                <li class="f11" style="animation-delay: 2s;"></li>
+                <li class="f11" style="animation-delay: 2.1s;"></li>
+                <li class="f11" style="animation-delay: 2.2s;"></li>
+                <li class="f11" style="animation-delay: 2.3s;"></li>
+                <li class="f11" style="animation-delay: 2.4s;"></li>
+
+                <li class="f11" style="animation-delay: 2.5s;"></li>
+                <li class="f11" style="animation-delay: 2.6s;"></li>
+                <li class="f11" style="animation-delay: 2.7s;"></li>
+                <li class="f11" style="animation-delay: 2.8s;"></li>
+                <li class="f11" style="animation-delay: 2.9s;"></li>
+                <li class="f11" style="animation-delay: 3s;"></li>
+                <li class="f11" style="animation-delay: 3.1s;"></li>
+
+                <li class="f11" style="animation-delay: 3.2s;"></li>
+                <li class="f11" style="animation-delay: 3.3s;"></li>
+                <li class="f11" style="animation-delay: 3.4s;"></li>
+                <li class="f11" style="animation-delay: 3.5s;"></li>
+                <li class="f11" style="animation-delay: 3.6s;"></li>
+                <li class="f11" style="animation-delay: 3.7s;"></li>
+                <li class="f11" style="animation-delay: 3.8s;"></li>
+                <li class="f11" style="animation-delay: 3.9s;"></li>
+                <li class="f11" style="animation-delay: 4s;"></li>
+                <li class="f11" style="animation-delay: 4.1s;"></li>
+                <li class="f11" style="animation-delay: 4.2s;"></li>
+                <li class="f11" style="animation-delay: 4.3s;"></li>
+                <li class="f11" style="animation-delay: 4.4s;"></li>
+
+                <li class="f11" style="animation-delay: 4.5s;"></li>
+                <li class="f11" style="animation-delay: 4.6s;"></li>
+                <li class="f11" style="animation-delay: 4.7s;"></li>
+                <li class="f11" style="animation-delay: 4.8s;"></li>
+                <li class="f11" style="animation-delay: 4.9s;"></li>
+                <li class="f11" style="animation-delay: 5s;"></li>
+                <li class="f11" style="animation-delay: 5.1s;"></li>
+                <li class="f11" style="animation-delay: 5.2s;"></li>
+                <li class="f11" style="animation-delay: 5.3s;"></li>
+                <li class="f11" style="animation-delay: 5.4s;"></li>
+                <li class="f11" style="animation-delay: 5.5s;"></li>
+                <li class="f11" style="animation-delay: 5.6s;"></li>
+                <li class="f11" style="animation-delay: 5.7s;"></li>
+                <li class="f11" style="animation-delay: 5.8s;"></li>
+                <li class="f11" style="animation-delay: 5.9s;"></li>
+                <li class="f11" style="animation-delay: 6s;"></li>
+                <li class="f11" style="animation-delay: 6.1s;"></li>
+                <li class="f11" style="animation-delay: 6.2s;"></li>
+
+                <li class="f11" style="animation-delay: 6.3s;"></li>
+                <li class="f11" style="animation-delay: 6.4s;"></li>
+                <li class="f11" style="animation-delay: 6.5s;"></li>
+                <li class="f11" style="animation-delay: 6.6s;"></li>
+
+                <li class="f11" style="animation-delay: 6.7s;"></li>
+                <li class="f11" style="animation-delay: 6.8s;"></li>
+                <li class="f11" style="animation-delay: 6.9s;"></li>
+                <li class="f11" style="animation-delay: 7s;"></li>
+                <li class="f11" style="animation-delay: 7.1s;"></li>
+                <li class="f11" style="animation-delay: 7.2s;"></li>
+                <li class="f11" style="animation-delay: 7.3s;"></li>
+                <li class="f11" style="animation-delay: 7.4s;"></li>
+                <li class="f11" style="animation-delay: 7.5s;"></li>
+                <li class="f11" style="animation-delay: 7.6s;"></li>
+                <li class="f11" style="animation-delay: 7.7s;"></li>
+                <li class="f11" style="animation-delay: 7.8s;"></li>
+                <li class="f11" style="animation-delay: 7.9s;"></li>
+                <li class="f11" style="animation-delay: 8s;"></li>
+                <li class="f11" style="animation-delay: 8.1s;"></li>
+                <li class="f11" style="animation-delay: 8.2s;"></li>
+                <li class="f11" style="animation-delay: 8.3s;"></li>
+                <li class="f11" style="animation-delay: 8.4s;"></li>
+                <li class="f11" style="animation-delay: 8.5s;"></li>
+                <li class="f11" style="animation-delay: 8.6s;"></li>
+                <li class="f11" style="animation-delay: 8.7s;"></li>
+                <li class="f11" style="animation-delay: 8.8s;"></li>
+                <li class="f11" style="animation-delay: 8.9s;"></li>
+                <li class="f11" style="animation-delay: 9s;"></li>
+                <li class="f11" style="animation-delay: 9.1s;"></li>
+                <li class="f11" style="animation-delay: 9.2s;"></li>
+                <li class="f11" style="animation-delay: 9.3s;"></li>
+                <li class="f11" style="animation-delay: 9.4s;"></li>
+                <li class="f11" style="animation-delay: 9.5s;"></li>
+                <li class="f11" style="animation-delay: 9.6s;"></li>
+                <li class="f11" style="animation-delay: 9.7s;"></li>
+                <li class="f11" style="animation-delay: 9.8s;"></li>
+                <li class="f11" style="animation-delay: 9.9s;"></li>
+                <li class="f11" style="animation-delay: 10s;"></li>
+
+                <li class="f11" style="animation-delay: 10.1s;"></li>
+                <li class="f11" style="animation-delay: 10.2s;"></li>
+                <li class="f11" style="animation-delay: 10.3s;"></li>
+                <li class="f11" style="animation-delay: 10.4s;"></li>
+                <li class="f11" style="animation-delay: 10.5s;"></li>
+                <li class="f11" style="animation-delay: 10.6s;"></li>
+                <li class="f11" style="animation-delay: 10.7s;"></li>
+                <li class="f11" style="animation-delay: 10.8s;"></li>
+                <li class="f11" style="animation-delay: 10.9s;"></li>
+                <li class="f11" style="animation-delay: 11s;"></li>
+                <li class="f11" style="animation-delay: 11.1s;"></li>
+                <li class="f11" style="animation-delay: 11.2s;"></li>
+                <li class="f11" style="animation-delay: 11.3s;"></li>
+                <li class="f11" style="animation-delay: 11.4s;"></li>
+                <li class="f11" style="animation-delay: 11.5s;"></li>
+                <li class="f11" style="animation-delay: 11.6s;"></li>
+                <li class="f11" style="animation-delay: 11.7s;"></li>
+                <li class="f11" style="animation-delay: 11.8s;"></li>
+                <li class="f11" style="animation-delay: 11.9s;"></li>
+
+
+
+
+
+
+
+
+            </ul>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
